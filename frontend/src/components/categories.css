@@ -1,0 +1,401 @@
+/* ===================================
+   CATEGORY GRID
+   Interactive decision-driven cards
+   =================================== */
+
+.category-grid {
+  width: 100%;
+  padding: 40px 0;
+  overflow: hidden; /* Prevent parent from causing scroll issues */
+}
+
+.category-grid__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Desktop specific - single horizontal row */
+@media (min-width: 768px) {
+  .category-grid__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    max-width: 100%;
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .category-grid__container {
+    gap: 28px;
+    padding: 0 60px;
+  }
+}
+
+/* ===================================
+   CATEGORY CARD
+   Individual interactive cards
+   =================================== */
+
+.category-card {
+  background: var(--color-bg-primary);
+  border: 2px solid var(--color-border-light);
+  border-radius: 16px;
+  padding: 40px 28px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px var(--color-shadow-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Desktop box layout - square cards */
+@media (min-width: 768px) {
+  .category-card {
+    flex: 1 1 0;
+    min-width: 160px;
+    max-width: 220px;
+    padding: 28px 16px;
+    min-height: 200px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Hover Effect: Elevation & Scale */
+.category-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 16px 32px var(--color-primary-shadow),
+              0 8px 16px var(--color-primary-light);
+  border-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-primary-bg) 100%);
+}
+
+.category-card:active {
+  transform: translateY(-3px) scale(1.01);
+  transition: all 0.1s ease;
+}
+
+/* Focus state for accessibility */
+.category-card:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.category-card:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ===================================
+   CARD ICON
+   Icon with color shift on hover
+   =================================== */
+
+.category-card__icon {
+  font-size: 56px;
+  line-height: 1;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  display: inline-block;
+}
+
+/* Desktop box layout icon */
+@media (min-width: 768px) {
+  .category-card__icon {
+    font-size: 56px;
+    margin-bottom: 16px;
+  }
+}
+
+.category-card:hover .category-card__icon {
+  transform: scale(1.15);
+  filter: brightness(1.1);
+}
+
+/* ===================================
+   CARD CONTENT WRAPPER
+   =================================== */
+
+.category-card__content {
+  display: contents;
+  width: 100%;
+}
+
+/* ===================================
+   CARD TITLE
+   Bold, clear category name
+   =================================== */
+
+.category-card__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin: 0 0 10px 0;
+  line-height: 1.2;
+  transition: color 0.3s ease;
+  letter-spacing: -0.01em;
+}
+
+/* Desktop box layout title */
+@media (min-width: 768px) {
+  .category-card__title {
+    font-size: 18px;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+  }
+}
+
+.category-card:hover .category-card__title {
+  color: var(--color-primary);
+}
+
+/* ===================================
+   CARD DESCRIPTION
+   One-line description only
+   =================================== */
+
+.category-card__description {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-text-medium);
+  margin: 0;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Desktop box layout description */
+@media (min-width: 768px) {
+  .category-card__description {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+}
+
+/* ===================================
+   CARD COUNT (Listing Count)
+   =================================== */
+
+.category-card__count {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-light);
+  margin: 8px 0 0 0;
+  line-height: 1;
+}
+
+/* Desktop box layout count */
+@media (min-width: 768px) {
+  .category-card__count {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 12px 0 0 0;
+  }
+}
+
+/* ===================================
+   TABLET RESPONSIVE (768px - 1024px)
+   =================================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .category-grid__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .category-card {
+    padding: 28px 20px;
+  }
+
+  .category-card__icon {
+    font-size: 52px;
+    margin-bottom: 16px;
+  }
+
+  .category-card__title {
+    font-size: 18px;
+  }
+
+  .category-card__description {
+    font-size: 13px;
+  }
+}
+
+/* ===================================
+   MOBILE RESPONSIVE (Below 768px)
+   Horizontal scroll with centered card + peek effect
+   =================================== */
+
+@media (max-width: 767px) {
+  .category-grid {
+    padding: 32px 0;
+    position: relative;
+    width: 100%;
+    overflow: visible; /* Allow container to scroll */
+  }
+
+  .category-grid__container {
+    display: flex !important;
+    grid-template-columns: unset !important;
+    flex-direction: row !important;
+    gap: 16px;
+    padding: 0 24px; /* Increased padding for better peek effect and last card visibility */
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity; /* Changed from mandatory for smoother scrolling */
+    scroll-padding-left: 24px;
+    scroll-padding-right: 24px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100%;
+    /* Smooth scrolling behavior */
+    scroll-behavior: smooth;
+    /* Better touch handling */
+    touch-action: pan-x;
+  }
+
+  .category-grid__container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-card {
+    flex: 0 0 calc(100vw - 80px) !important;
+    min-width: calc(100vw - 80px);
+    max-width: calc(100vw - 80px);
+    scroll-snap-align: center;
+    scroll-snap-stop: normal; /* Changed from always for smoother scrolling */
+    padding: 32px 24px;
+    /* Prevent card from shrinking */
+    flex-shrink: 0;
+  }
+
+  .category-card__icon {
+    font-size: 52px;
+    margin-bottom: 16px;
+  }
+
+  .category-card__title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .category-card__description {
+    font-size: 14px;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    line-height: 1.4;
+    max-height: 2.8em;
+    overflow: hidden;
+  }
+
+  .category-card__count {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+
+  .category-card:hover {
+    transform: translateY(-3px) scale(1.01);
+  }
+}
+
+/* Small mobile optimization */
+@media (max-width: 480px) {
+  .category-grid__container {
+    display: flex !important;
+    flex-direction: row !important;
+    padding: 0 20px; /* Consistent padding for peek effect */
+    padding-right: 20px;
+    gap: 12px;
+    scroll-padding-left: 20px;
+    scroll-padding-right: 20px;
+  }
+
+  .category-card {
+    flex: 0 0 calc(100vw - 64px) !important;
+    min-width: calc(100vw - 64px);
+    max-width: calc(100vw - 64px);
+    padding: 28px 20px;
+    flex-shrink: 0;
+  }
+
+  .category-card__icon {
+    font-size: 48px;
+  }
+
+  .category-card__title {
+    font-size: 19px;
+  }
+
+  .category-card__description {
+    font-size: 13px;
+  }
+
+  .category-card__count {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 767px) {
+  .category-grid {
+    position: relative;
+  }
+
+  /* Gradient fade effect for scroll indication */
+  .category-grid::before,
+  .category-grid::after {
+    content: '';
+    position: absolute;
+    top: 32px;
+    bottom: 32px;
+    width: 40px; /* Increased width for better visibility */
+    pointer-events: none;
+    z-index: 2; /* Above cards but below interactive elements */
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+  }
+
+  .category-grid::before {
+    left: 0;
+    background: linear-gradient(to right, var(--color-bg-primary), transparent);
+  }
+
+  .category-grid::after {
+    right: 0;
+    background: linear-gradient(to left, var(--color-bg-primary), transparent);
+  }
+
+  /* Hide gradients when at scroll boundaries (optional enhancement) */
+  .category-grid__container:first-child {
+    scroll-margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .category-card,
+  .category-card__icon {
+    transition: none;
+  }
+
+  .category-card:hover {
+    transform: none;
+  }
+}

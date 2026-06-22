@@ -1,0 +1,367 @@
+/* Color Variables - Light Mode (Default) */
+:root,
+.light {
+  /* Primary Colors */
+  --color-primary: #24378a;
+  --color-primary-dark: #4262ef;
+  --color-primary-darker: #5568d3;
+  --color-primary-light: rgba(102, 126, 234, 0.1);
+  --color-primary-bg: #f0f0ff;
+  --color-primary-shadow: rgba(102, 126, 234, 0.3);
+  --color-primary-shadow-medium: rgba(102, 126, 234, 0.4);
+  
+  /* Secondary Colors */
+  --color-secondary: #764ba2;
+  --color-secondary-dark: #69329f;
+  
+  /* Blue Colors */
+  --color-blue: #0066cc;
+  --color-blue-dark: #0052a3;
+  
+  /* Success Colors */
+  --color-success: #48bb78;
+  
+  /* Error Colors */
+  --color-error: #e53e3e;
+  --color-error-bg: #fff5f5;
+  --color-error-message-bg: #fed7d7;
+  
+  /* Text Colors */
+  --color-text-primary: #333;
+  --color-text-secondary: #666;
+  --color-text-tertiary: #999;
+  --color-text-dark: #2d3748;
+  --color-text-heading: #1a1a1a;
+  --color-text-medium: #718096;
+  --color-text-light: #a0aec0;
+  --color-text-white: white;
+  
+  /* Background Colors */
+  --color-bg-primary: white;
+  --color-bg-secondary: #f8f9fa;
+  --color-bg-tertiary: #f0f0f0;
+  --color-bg-input: #f7fafc;
+  --color-bg-page: transparent;
+  
+  /* Border Colors */
+  --color-border: #4a5568;
+  --color-border-light: #4a5568;
+  --color-border-medium: #4a5568;
+  --color-border-hover: #718096;
+  
+  /* Shadow Colors */
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-shadow-dark: rgba(0, 0, 0, 0.228);
+  --color-shadow-modal: rgba(0, 0, 0, 0.3);
+  
+  /* Action/Button Colors */
+  --color-action: #007bff;
+  --color-action-dark: #0056b3;
+  --color-action-shadow: rgba(0, 123, 255, 0.3);
+  --color-action-light: rgba(0, 123, 255, 0.1);
+  
+  /* Background Hover Colors */
+  --color-bg-hover: #f5f5f5;
+  
+  /* Stat Icon Background Colors */
+  --color-stat-total: #e3f2fd;
+  --color-stat-active: #e8f5e9;
+  --color-stat-views: #fff3e0;
+  --color-stat-bookings: #f3e5f5;
+  
+  /* Error Colors (Alternative) */
+  --color-error-alt: #dc3545;
+  --color-error-alt-dark: #c82333;
+  --color-error-alt-shadow: rgba(220, 53, 69, 0.3);
+  --color-error-red: #dc2626;
+  --color-error-red-bg-light: #fef2f2;
+  --color-error-alt-dark: #c82333;
+  --color-error-alt-shadow: rgba(220, 53, 69, 0.3);
+  
+  /* Material Design Colors */
+  --color-md-blue: #2196F3;
+  --color-md-blue-light: rgba(33, 150, 243, 0.15);
+  --color-md-red: #F44336;
+  --color-md-red-dark: #d32f2f;
+  --color-md-red-shadow: rgba(244, 67, 54, 0.4);
+  
+  /* Background Gradients */
+  --color-bg-gradient-start: #f5f7fa;
+  --color-bg-gradient-end: #c3cfe2;
+  
+  /* Shadow Variants */
+  --color-shadow-light: rgba(0, 0, 0, 0.08);
+  --color-shadow-medium: rgba(0, 0, 0, 0.12);
+  --color-shadow-overlay: rgba(0, 0, 0, 0.6);
+  --color-shadow-modal: rgba(0, 0, 0, 0.3);
+  
+  /* Spinner/Loading Colors */
+  --color-spinner-bg: #f3f3f3;
+  
+  /* Overlay/Modal Colors */
+  --color-overlay-bg: rgba(0, 0, 0, 0.6);
+  
+  /* Tab Count Background */
+  --color-tab-count-bg: rgba(255, 255, 255, 0.3);
+  --color-tab-count-bg-active: rgba(255, 255, 255, 0.25);
+  
+  /* Tailwind-inspired Gray Scale Colors */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-900: #111827;
+  
+  /* Warning/Amber Colors */
+  --color-warning-amber: #fef3c7;
+  --color-warning-amber-light: #fde68a;
+  --color-warning-amber-text: #92400e;
+  --color-amber: #fbbf24;
+  --color-amber-text: #78350f;
+  --color-amber-shadow: rgba(251, 191, 36, 0.3);
+  
+  /* Blue Accent Text Colors */
+  --color-blue-accent-text-dark: #1e3a8a;
+  
+  /* Overlay Colors */
+  --color-overlay-dark: rgba(0, 0, 0, 0.7);
+  --color-overlay-modal: rgba(0, 0, 0, 0.6);
+  --color-overlay-light: rgba(255, 255, 255, 0.3);
+  --color-overlay-white-light: rgba(255, 255, 255, 0.3);
+  --color-overlay-white-medium: rgba(255, 255, 255, 0.5);
+  --color-overlay-transparent: rgba(255, 255, 255, 0);
+  
+  /* Overlay/Backdrop Colors */
+  --color-overlay-white: rgba(255, 255, 255, 0.95);
+  
+  /* Blue Accent Colors */
+  --color-blue-accent: #3b82f6;
+  --color-blue-accent-dark: #2563eb;
+  --color-blue-accent-light: rgba(59, 130, 246, 0.1);
+  --color-blue-accent-bg: #dbeafe;
+  --color-blue-accent-bg-light: #eff6ff;
+  --color-blue-accent-bg-medium: #bfdbfe;
+  --color-blue-accent-bg-lighter: #93c5fd;
+  --color-blue-accent-text: #1e40af;
+  --color-blue-accent-shadow: rgba(59, 130, 246, 0.2);
+  --color-blue-accent-shadow-medium: rgba(59, 130, 246, 0.3);
+  
+  /* Purple/Violet Colors */
+  --color-purple: #8b5cf6;
+  
+  /* Success Colors (Tailwind) */
+  --color-success-green: #10b981;
+  --color-success-green-dark: #059669;
+  --color-success-green-darker: #047857;
+  --color-success-green-bg: #d1fae5;
+  --color-success-green-bg-light: #f0fdf4;
+  --color-success-green-text: #065f46;
+  
+  /* Bootstrap Success Colors */
+  --color-success-bootstrap: #28a745;
+  
+  /* Status Colors */
+  --color-status-inactive: #6c757d;
+  --color-status-warning: #ffc107;
+  
+  /* Background Colors (Additional) */
+  --color-bg-quaternary: #fafafa;
+  
+  /* Map/Blue Light Colors */
+  --color-map-bg-start: #e0f2fe;
+  --color-map-bg-end: #bae6fd;
+  --color-map-text: #0c4a6e;
+  --color-map-text-light: #075985;
+  
+  /* Error Colors (Tailwind) */
+  --color-error-red: #ef4444;
+  --color-error-red-bg: #fee2e2;
+  
+  /* Text Colors (Additional) */
+  --color-text-heading-alt: #1f2937;
+}
+
+/* Dark Mode - Placeholder for future implementation */
+.dark {
+  /* TODO: Update these values for dark mode */
+  /* Primary Colors */
+  --color-primary: #667eea;
+  --color-primary-dark: #4262ef;
+  --color-primary-darker: #5568d3;
+  --color-primary-light: rgba(102, 126, 234, 0.1);
+  --color-primary-bg: #667eea;
+  --color-primary-shadow: rgba(102, 126, 234, 0.3);
+  --color-primary-shadow-medium: rgba(102, 126, 234, 0.4);
+  
+  /* Secondary Colors */
+  --color-secondary: #764ba2;
+  --color-secondary-dark: #69329f;
+  
+  /* Blue Colors */
+  --color-blue: #0066cc;
+  --color-blue-dark: #0052a3;
+  
+  /* Success Colors */
+  --color-success: #48bb78;
+  
+  /* Error Colors */
+  --color-error: #e53e3e;
+  --color-error-bg: #fff5f5;
+  --color-error-message-bg: #fed7d7;
+  
+  /* Text Colors */
+  --color-text-primary: #e2e8f0;
+  --color-text-secondary: #a0aec0;
+  --color-text-tertiary: #718096;
+  --color-text-dark: #f7fafc;
+  --color-text-heading: #f7fafc;
+  --color-text-medium: #cbd5e0;
+  --color-text-light: #718096;
+  --color-text-white: white;
+  
+  /* Background Colors */
+  --color-bg-primary: #1a202c;
+  --color-bg-secondary: #2d3748;
+  --color-bg-tertiary: #4a5568;
+  --color-bg-input: #2d3748;
+  --color-bg-page: #1a202c;
+  
+  /* Border Colors */
+  --color-border: #4a5568;
+  --color-border-light: #4a5568;
+  --color-border-medium: #4a5568;
+  --color-border-hover: #718096;
+  
+  /* Shadow Colors */
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-shadow-dark: rgba(0, 0, 0, 0.5);
+  
+  /* Action/Button Colors */
+  --color-action: #4299e1;
+  --color-action-dark: #3182ce;
+  --color-action-shadow: rgba(66, 153, 225, 0.3);
+  --color-action-light: rgba(66, 153, 225, 0.1);
+  
+  /* Background Hover Colors */
+  --color-bg-hover: #2d3748;
+  
+  /* Stat Icon Background Colors */
+  --color-stat-total: #1e3a5f;
+  --color-stat-active: #1e3a5f;
+  --color-stat-views: #1e3a5f;
+  --color-stat-bookings: #1e3a5f;
+  
+  /* Error Colors (Alternative) */
+  --color-error-alt: #fc8181;
+  
+  /* Material Design Colors */
+  --color-md-blue: #4299e1;
+  --color-md-blue-light: rgba(66, 153, 225, 0.15);
+  --color-md-red: #fc8181;
+  --color-md-red-dark: #e53e3e;
+  --color-md-red-shadow: rgba(252, 129, 129, 0.4);
+  
+  /* Background Gradients */
+  --color-bg-gradient-start: #2d3748;
+  --color-bg-gradient-end: #4a5568;
+  
+  /* Shadow Variants */
+  --color-shadow-light: rgba(0, 0, 0, 0.2);
+  --color-shadow-medium: rgba(0, 0, 0, 0.3);
+  --color-shadow-overlay: rgba(0, 0, 0, 0.8);
+  --color-shadow-modal: rgba(0, 0, 0, 0.5);
+  
+  /* Spinner/Loading Colors */
+  --color-spinner-bg: #4a5568;
+  
+  /* Overlay/Modal Colors */
+  --color-overlay-bg: rgba(0, 0, 0, 0.8);
+  
+  /* Tab Count Background */
+  --color-tab-count-bg: rgba(255, 255, 255, 0.2);
+  --color-tab-count-bg-active: rgba(255, 255, 255, 0.15);
+  
+  /* Tailwind-inspired Gray Scale Colors */
+  --color-gray-50: #1a202c;
+  --color-gray-100: #2d3748;
+  --color-gray-200: #4a5568;
+  --color-gray-300: #4a5568;
+  --color-gray-400: #718096;
+  --color-gray-500: #a0aec0;
+  --color-gray-600: #718096;
+  --color-gray-700: #cbd5e0;
+  --color-gray-900: #f7fafc;
+  
+  /* Warning/Amber Colors */
+  --color-warning-amber: #744210;
+  --color-warning-amber-light: #744210;
+  --color-warning-amber-text: #fbbf24;
+  --color-amber: #fbbf24;
+  --color-amber-text: #fbbf24;
+  --color-amber-shadow: rgba(251, 191, 36, 0.3);
+  
+  /* Blue Accent Text Colors */
+  --color-blue-accent-text-dark: #90cdf4;
+  
+  /* Overlay Colors */
+  --color-overlay-dark: rgba(0, 0, 0, 0.8);
+  --color-overlay-modal: rgba(0, 0, 0, 0.7);
+  --color-overlay-light: rgba(255, 255, 255, 0.2);
+  --color-overlay-white-light: rgba(255, 255, 255, 0.2);
+  --color-overlay-white-medium: rgba(255, 255, 255, 0.3);
+  --color-overlay-transparent: rgba(255, 255, 255, 0);
+  
+  /* Overlay/Backdrop Colors */
+  --color-overlay-white: rgba(255, 255, 255, 0.1);
+  
+  /* Blue Accent Colors */
+  --color-blue-accent: #4299e1;
+  --color-blue-accent-dark: #3182ce;
+  --color-blue-accent-light: rgba(66, 153, 225, 0.1);
+  --color-blue-accent-bg: #1e3a5f;
+  --color-blue-accent-bg-light: #2d3748;
+  --color-blue-accent-bg-medium: #4a5568;
+  --color-blue-accent-bg-lighter: #63b3ed;
+  --color-blue-accent-text: #90cdf4;
+  --color-blue-accent-shadow: rgba(66, 153, 225, 0.2);
+  --color-blue-accent-shadow-medium: rgba(66, 153, 225, 0.3);
+  
+  /* Purple/Violet Colors */
+  --color-purple: #a78bfa;
+  
+  /* Success Colors (Tailwind) */
+  --color-success-green: #48bb78;
+  --color-success-green-dark: #38a169;
+  --color-success-green-darker: #2f855a;
+  --color-success-green-bg: #1e3a5f;
+  --color-success-green-bg-light: #1e3a5f;
+  --color-success-green-text: #48bb78;
+  
+  /* Bootstrap Success Colors */
+  --color-success-bootstrap: #48bb78;
+  
+  /* Status Colors */
+  --color-status-inactive: #718096;
+  --color-status-warning: #fbbf24;
+  
+  /* Background Colors (Additional) */
+  --color-bg-quaternary: #2d3748;
+  
+  /* Map/Blue Light Colors */
+  --color-map-bg-start: #1e3a5f;
+  --color-map-bg-end: #2d3748;
+  --color-map-text: #90cdf4;
+  --color-map-text-light: #cbd5e0;
+  
+  /* Error Colors (Tailwind) */
+  --color-error-red: #fc8181;
+  --color-error-red-bg: #742a2a;
+  
+  /* Text Colors (Additional) */
+  --color-text-heading-alt: #f7fafc;
+}
+

@@ -1,0 +1,412 @@
+.admin-user-listings {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.admin-listings-page-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.admin-listings-back-btn {
+  padding: 0.75rem 1.5rem;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.admin-listings-back-btn:hover {
+  border-color: var(--primary-color, #4A90E2);
+  color: var(--primary-color, #4A90E2);
+}
+
+.admin-listings-page-header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 2rem;
+}
+
+/* User Info Card */
+.admin-listings-user-info-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.admin-listings-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.admin-listings-user-avatar-large {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #e0e0e0;
+}
+
+.admin-listings-user-details h2 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.admin-listings-user-email,
+.admin-listings-user-phone {
+  margin: 0.25rem 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.admin-listings-user-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.admin-listings-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.admin-listings-stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-listings-stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color, #4A90E2);
+}
+
+/* Status Badges */
+.admin-listings-status-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0.5rem;
+}
+
+.admin-listings-status-active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.admin-listings-status-inactive {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.admin-listings-status-archived {
+  background: #e2e3e5;
+  color: #383d41;
+}
+
+/* Listings Section */
+.admin-listings-listings-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.admin-listings-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.admin-listings-section-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.admin-listings-status-filter {
+  padding: 0.75rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.admin-listings-status-filter:focus {
+  outline: none;
+  border-color: var(--primary-color, #4A90E2);
+}
+
+/* Listings Grid */
+.admin-listings-listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.admin-listings-listing-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.admin-listings-listing-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+}
+
+.admin-listings-listing-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.admin-listings-listing-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-listings-listing-image .admin-listings-status-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.admin-listings-listing-content {
+  padding: 1.5rem;
+}
+
+.admin-listings-listing-title {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-listings-listing-category {
+  margin: 0 0 0.5rem 0;
+  color: #666;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.admin-listings-listing-price {
+  margin: 0 0 0.75rem 0;
+  color: var(--primary-color, #4A90E2);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.admin-listings-listing-location {
+  margin: 0 0 1rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.admin-listings-listing-meta {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Listing Actions */
+.admin-listings-listing-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-top: 2px solid #e0e0e0;
+}
+
+.admin-listings-listing-actions button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.admin-listings-btn-view {
+  background: var(--primary-color, #4A90E2);
+  color: white;
+}
+
+.admin-listings-btn-view:hover {
+  background: #357ABD;
+}
+
+.admin-listings-btn-activate {
+  background: #28a745;
+  color: white;
+}
+
+.admin-listings-btn-activate:hover {
+  background: #218838;
+}
+
+.admin-listings-btn-deactivate {
+  background: #ffc107;
+  color: #333;
+}
+
+.admin-listings-btn-deactivate:hover {
+  background: #e0a800;
+}
+
+.admin-listings-btn-delete {
+  background: #dc3545;
+  color: white;
+}
+
+.admin-listings-btn-delete:hover {
+  background: #c82333;
+}
+
+/* No Listings */
+.admin-listings-no-listings {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Pagination */
+.admin-listings-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+
+.admin-listings-pagination-btn {
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color, #4A90E2);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.admin-listings-pagination-btn:hover:not(:disabled) {
+  background: #357ABD;
+}
+
+.admin-listings-pagination-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.admin-listings-pagination-info {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Loading & Error States */
+.admin-listings-loading,
+.admin-listings-error-container {
+  text-align: center;
+  padding: 3rem;
+}
+
+.admin-listings-error-container h2 {
+  color: #dc3545;
+  margin-bottom: 1rem;
+}
+
+.admin-listings-error-container button {
+  padding: 0.75rem 2rem;
+  background: var(--primary-color, #4A90E2);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .admin-listings-listings-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-user-listings {
+    padding: 1rem;
+  }
+
+  .admin-listings-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-listings-user-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .admin-listings-user-stats {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .admin-listings-listings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-listings-section-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .admin-listings-status-filter {
+    width: 100%;
+  }
+}

@@ -1,0 +1,121 @@
+/**
+ * CategoryStep Component Styles
+ * Animated category cards with hover effects
+ */
+
+.category-step {
+  width: 100%;
+}
+
+.listing-category-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.listing-category-card {
+  background: var(--color-bg-primary);
+  border: 3px solid var(--color-gray-200);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.listing-category-card--selected {
+  border-color: var(--color-blue-accent);
+  background: linear-gradient(135deg, var(--color-blue-accent-bg) 0%, var(--color-blue-accent-bg-light) 100%);
+  box-shadow: 0 8px 24px var(--color-blue-accent-shadow);
+}
+
+.listing-category-button {
+  width: 100%;
+  padding: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.listing-category-icon {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.listing-category-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-heading-alt);
+  margin: 0;
+}
+
+.listing-category-description {
+  font-size: 14px;
+  color: var(--color-gray-500);
+  margin: 0;
+}
+
+.listing-category-examples {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.listing-example-tag {
+  font-size: 12px;
+  padding: 4px 12px;
+  background: var(--color-gray-100);
+  border-radius: 12px;
+  color: var(--color-gray-500);
+}
+
+.listing-category-card--selected .listing-example-tag {
+  background: var(--color-blue-accent-bg-medium);
+  color: var(--color-blue-accent-text);
+}
+
+.listing-selection-indicator {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  background: var(--color-blue-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-white);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Tablet and up */
+@media (min-width: 640px) {
+  .listing-category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .listing-category-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .listing-category-button {
+    padding: 28px;
+  }
+
+  .listing-category-icon {
+    font-size: 56px;
+  }
+}

@@ -1,0 +1,48 @@
+/**
+ * DetailsStep Component Styles
+ * Dynamic form fields with animations
+ */
+
+.details-step {
+  width: 100%;
+}
+
+.category-fields {
+  margin-top: 32px;
+}
+
+.details-page-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-heading-alt);
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-gray-200);
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive form layouts */
+@media (min-width: 768px) {
+  .category-fields .form-group {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .category-fields .form-label {
+    padding-top: 12px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .details-page-section-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+}
+/* Dark Mode Styles */
+.dark .details-page-section-title {
+  color: var(--color-text-heading-alt);
+  border-bottom-color: var(--color-border);
+}

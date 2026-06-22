@@ -1,0 +1,26 @@
+.icon-button {
+    position: relative; /* Explicitly set to ensure absolute positioning works */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--accent-purple);
+  }
+  .icon-button:hover {
+    color: var(--foreground);
+  }
+  
+  .icon-button svg {
+    color: var(--foreground); /* Default to foreground for visibility */
+  }
+  
+  .dark .icon-button svg {
+    color: var(--accent-blue); /* Blue in dark theme for contrast */
+  }
+  
+  .light .icon-button svg {
+    color: var(--foreground); /* Dark text in light theme for contrast */
+  }

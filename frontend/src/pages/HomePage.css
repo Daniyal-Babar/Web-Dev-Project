@@ -1,0 +1,294 @@
+/* Home Page Styles */
+.home-page {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.home-page .hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: var(--color-text-white);
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-page .hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.home-page .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.home-page .hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-text-white);
+}
+
+.home-page .hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+/* Categories Section */
+.home-page .categories-section {
+  padding: 4rem 0;
+  background: var(--color-bg-primary);
+}
+
+.home-page .categories-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* How It Works Section */
+.home-page .how-it-works {
+  padding: 4rem 0;
+  background: var(--color-bg-secondary);
+}
+
+.home-page .how-it-works h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.home-page .steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.home-page .step {
+  text-align: center;
+  padding: 2rem;
+  background: var(--color-bg-primary);
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  transition: all 0.3s;
+}
+
+.home-page .step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px var(--color-shadow);
+}
+
+.home-page .step-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: var(--color-text-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 1rem;
+  box-shadow: 0 4px 12px var(--color-primary-shadow);
+}
+
+.home-page .step h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.home-page .step p {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Stats Section */
+.home-page .stats {
+  padding: 3rem 0;
+  background: var(--color-bg-primary);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.home-page .stats .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+}
+
+.home-page .stat {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.home-page .stat h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.home-page .stat p {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* CTA Section */
+.home-page .cta {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, rgba(118, 75, 162, 0.1) 100%);
+  text-align: center;
+}
+
+.home-page .cta h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}
+
+.home-page .cta p {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-page .cta .btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px var(--color-primary-shadow);
+}
+
+.home-page .cta .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--color-primary-shadow-medium);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-page .hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .home-page .hero h1 {
+    font-size: 2rem;
+  }
+
+  .home-page .hero p {
+    font-size: 1rem;
+  }
+
+  .home-page .categories-section,
+  .home-page .how-it-works,
+  .home-page .cta {
+    padding: 3rem 0;
+  }
+
+  .home-page .categories-section h2,
+  .home-page .how-it-works h2,
+  .home-page .cta h2 {
+    font-size: 1.75rem;
+  }
+
+  .home-page .steps {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Stats: 2x2 Grid on Mobile - All visible at once */
+  .home-page .stats {
+    padding: 2.5rem 0;
+  }
+
+  .home-page .stats .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .home-page .stat {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .home-page .stat h3 {
+    font-size: 2rem;
+  }
+
+  .home-page .stat p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page .hero {
+    padding: 2.5rem 1rem;
+  }
+
+  .home-page .hero h1 {
+    font-size: 1.75rem;
+    word-wrap: break-word;
+  }
+
+  .home-page .hero p {
+    font-size: 0.95rem;
+  }
+
+  .home-page .categories-section,
+  .home-page .how-it-works,
+  .home-page .cta {
+    padding: 2.5rem 0;
+  }
+
+  /* Keep 2x2 grid even on small screens */
+  .home-page .stats .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 0.75rem;
+  }
+
+  .home-page .stat {
+    padding: 1rem 0.25rem;
+  }
+
+  .home-page .stat h3 {
+    font-size: 1.75rem;
+  }
+
+  .home-page .stat p {
+    font-size: 0.8rem;
+  }
+}
+

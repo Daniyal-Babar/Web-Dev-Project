@@ -1,0 +1,497 @@
+/**
+ * Checkout Page New Styles
+ * Mobile-first responsive design
+ * Easypaisa payment integration
+ */
+
+.checkout-page-new {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--color-bg-gradient-start) 0%, var(--color-bg-gradient-end) 100%);
+  padding: 20px;
+  padding-bottom: 40px;
+}
+
+.checkout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ======================
+   Header
+   ====================== */
+.checkout-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--color-bg-primary);
+  border: none;
+  border-radius: 10px;
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--color-shadow-light);
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--color-shadow-medium);
+}
+
+.checkout-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin: 0;
+}
+
+/* ======================
+   Loading & Error States
+   ====================== */
+.loading-spinner,
+.error-container {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--color-bg-hover);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-spinner p {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+}
+
+.error-icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+}
+
+.error-container h2 {
+  font-size: 1.5rem;
+  color: var(--color-text-heading);
+  margin: 0 0 12px 0;
+}
+
+.error-container p {
+  color: var(--color-text-secondary);
+  margin: 0 0 24px 0;
+}
+
+/* ======================
+   Checkout Content
+   ====================== */
+.checkout-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .checkout-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ======================
+   Booking Summary Card
+   ====================== */
+.booking-summary-card {
+  background: var(--color-bg-primary);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px var(--color-shadow-light);
+  height: fit-content;
+}
+
+.booking-summary-card h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin: 0 0 20px 0;
+}
+
+.summary-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--color-shadow-light);
+}
+
+.item-details h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-heading);
+  margin: 0 0 8px 0;
+}
+
+.item-category {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.summary-divider {
+  height: 1px;
+  background: var(--color-bg-hover);
+  margin: 16px 0;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.summary-row .label {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+.summary-row .value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.summary-row.total {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 2px solid var(--color-primary);
+}
+
+.summary-row.total .label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+}
+
+.summary-row.total .value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* ======================
+   Payment Form Card
+   ====================== */
+.payment-form-card {
+  background: var(--color-bg-primary);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px var(--color-shadow-light);
+  height: fit-content;
+}
+
+.payment-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--color-bg-hover);
+}
+
+.easypaisa-logo {
+  flex-shrink: 0;
+}
+
+.payment-header h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin: 0;
+}
+
+.payment-header p {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin: 4px 0 0 0;
+}
+
+/* Error Message */
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: rgba(244, 67, 54, 0.1);
+  border: 1px solid rgba(244, 67, 54, 0.3);
+  border-radius: 10px;
+  color: var(--color-md-red);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.error-message svg {
+  flex-shrink: 0;
+}
+
+/* Form Label */
+.form-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-heading);
+  margin-bottom: 8px;
+}
+
+/* Phone Input Section */
+.phone-input-section {
+  margin-bottom: 24px;
+}
+
+.phone-input-wrapper {
+  display: flex;
+  align-items: center;
+  background: var(--color-bg-secondary);
+  border: 2px solid var(--color-bg-hover);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.phone-input-wrapper:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-shadow-light);
+}
+
+.country-code {
+  padding: 14px 16px;
+  background: var(--color-bg-hover);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  border-right: 2px solid var(--color-bg-hover);
+}
+
+.phone-input {
+  flex: 1;
+  padding: 14px 16px;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  outline: none;
+}
+
+.phone-input::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.phone-input.error {
+  border-color: var(--color-md-red);
+}
+
+.input-error {
+  display: block;
+  color: var(--color-md-red);
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+.input-hint {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin: 8px 0 20px 0;
+}
+
+/* OTP Input Section */
+.otp-input-section {
+  margin-bottom: 24px;
+}
+
+.otp-sent-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: rgba(76, 175, 80, 0.1);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  border-radius: 10px;
+  color: var(--color-success);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.otp-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--color-bg-secondary);
+  border: 2px solid var(--color-bg-hover);
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-align: center;
+  letter-spacing: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.otp-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-shadow-light);
+}
+
+.otp-input.error {
+  border-color: var(--color-md-red);
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary,
+.btn-text {
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 12px var(--color-primary-shadow-medium);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--color-primary-shadow-medium);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Secondary button - used for "Back to Bookings" etc.
+   Make it clearly visible in light theme using primary colors */
+.checkout-page-new .btn-secondary {
+  background: var(--color-bg-primary);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.checkout-page-new .btn-secondary:hover {
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-text {
+  background: transparent;
+  color: var(--color-primary);
+  border: none;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+}
+
+.btn-text:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
+.btn-text:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Security Note */
+.security-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--color-bg-hover);
+  border-radius: 10px;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  margin-top: 20px;
+}
+
+.security-note svg {
+  flex-shrink: 0;
+  color: var(--color-success);
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+  .checkout-page-new {
+    padding: 16px;
+  }
+
+  .checkout-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .booking-summary-card,
+  .payment-form-card {
+    padding: 20px;
+  }
+
+  .item-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .summary-row.total .value {
+    font-size: 1.2rem;
+  }
+}
+
+/* Dark mode adjustments */
+.dark .phone-input-wrapper,
+.dark .otp-input {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark .country-code {
+  background: rgba(255, 255, 255, 0.1);
+}

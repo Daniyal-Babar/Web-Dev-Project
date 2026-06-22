@@ -1,0 +1,249 @@
+/**
+ * LocationStep Component Styles
+ * Location selection and rental rules
+ */
+
+.location-step {
+  width: 100%;
+}
+
+/* City autocomplete */
+.city-group {
+  position: relative;
+}
+
+.divider-bottom {
+  margin-bottom: 1rem;
+}
+
+.autocomplete-wrapper {
+  position: relative;
+}
+
+.suggestions-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--color-bg-primary);
+  border: 2px solid var(--color-gray-200);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+  box-shadow: 0 4px 12px var(--color-shadow);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.suggestion-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--color-gray-700);
+  transition: background 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background: var(--color-gray-100);
+}
+
+/* Map placeholder */
+.map-placeholder {
+  height: 200px;
+  background: linear-gradient(135deg, var(--color-map-bg-start) 0%, var(--color-map-bg-end) 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-content {
+  text-align: center;
+  z-index: 1;
+}
+
+.map-pin {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.map-content p {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-map-text);
+  margin: 0 0 4px 0;
+}
+
+.map-note {
+  font-size: 12px;
+  color: var(--color-map-text-light);
+}
+
+/* Rules section */
+.rules-section {
+  margin: 32px 0;
+}
+
+.location-page-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-heading-alt);
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  font-size: 14px;
+  color: var(--color-gray-500);
+  margin: 0 0 20px 0;
+}
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.rule-card {
+  background: var(--color-bg-primary);
+  border: 2px solid var(--color-gray-200);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.rule-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--color-shadow);
+}
+
+.rule-card--selected {
+  border-color: var(--color-blue-accent);
+  background: var(--color-blue-accent-bg-light);
+}
+
+.rule-button {
+  width: 100%;
+  padding: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  text-align: center;
+}
+
+.rule-icon {
+  font-size: 32px;
+}
+
+.rule-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-gray-700);
+  font-family: 'Poppins', sans-serif;
+}
+
+.rule-card--selected .rule-label {
+  color: var(--color-blue-accent-text);
+}
+
+.rule-check {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  background: var(--color-blue-accent);
+  border-radius: 50%;
+  color: var(--color-text-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Final checklist */
+.final-checklist {
+  background: var(--color-success-green-bg-light);
+  border: 2px solid var(--color-success-green);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 32px 0;
+}
+
+.final-checklist h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-success-green-text);
+  margin: 0 0 16px 0;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checklist li {
+  font-size: 14px;
+  color: var(--color-success-green-darker);
+  padding: 8px 0;
+  padding-left: 32px;
+  position: relative;
+}
+
+.checklist li::before {
+  content: '○';
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+  color: var(--color-gray-400);
+}
+
+.checklist li.checked::before {
+  content: '✓';
+  color: var(--color-success-green);
+}
+
+.checklist li.checked {
+  color: var(--color-success-green-text);
+  font-weight: 600;
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .rules-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+  }
+
+  .rule-button {
+    padding: 12px;
+  }
+
+  .rule-icon {
+    font-size: 28px;
+  }
+
+  .rule-label {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .location-page-section-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,270 @@
+/* ===================================
+   HERO SECTION
+   Modern, compact landing experience
+   =================================== */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(135deg, var(--color-bg-gradient-start) 0%, var(--color-bg-gradient-end) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ===================================
+   HERO CONTENT CONTAINER
+   =================================== */
+
+.hero-section__content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  min-height: 60vh;
+  justify-content: center;
+}
+
+/* ===================================
+   HERO TITLE
+   Font-weight: 700-800, Max 2 lines
+   =================================== */
+
+.hero-section__title {
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--color-text-heading);
+  margin: 0 0 20px 0;
+  line-height: 1.15;
+  max-width: 900px;
+  letter-spacing: -0.02em;
+  
+  /* Limit to 2 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ===================================
+   HERO SUBTITLE
+   Font-weight: 400-500, One sentence
+   =================================== */
+
+.hero-section__subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  margin: 0 0 40px 0;
+  line-height: 1.6;
+  max-width: 700px;
+  
+  /* Limit to one line on large screens, allow wrap on smaller */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ===================================
+   HERO SEARCH WRAPPER
+   =================================== */
+
+.hero-section__search {
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 24px;
+}
+
+/* ===================================
+   TRUST SIGNALS
+   Small text below search
+   =================================== */
+
+.hero-section__trust-signals {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.trust-signal {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-medium);
+}
+
+.trust-signal__icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* ===================================
+   HERO CATEGORIES SECTION
+   Partially visible below fold
+   =================================== */
+
+.hero-section__categories {
+  width: 100%;
+  background: var(--color-bg-primary);
+  padding-top: 20px;
+  padding-bottom: 40px;
+  overflow: visible; /* Allow horizontal scrolling of child elements */
+}
+
+/* ===================================
+   TABLET RESPONSIVE (768px - 1024px)
+   =================================== */
+
+@media (max-width: 1024px) {
+  .hero-section__content {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    min-height: 50vh;
+  }
+
+  .hero-section__title {
+    font-size: 44px;
+    margin-bottom: 16px;
+  }
+
+  .hero-section__subtitle {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+
+  .hero-section__trust-signals {
+    gap: 24px;
+  }
+
+  .trust-signal {
+    font-size: 13px;
+  }
+
+  .trust-signal__icon {
+    font-size: 14px;
+  }
+}
+
+/* ===================================
+   MOBILE RESPONSIVE (Below 768px)
+   Natural content flow
+   =================================== */
+
+@media (max-width: 767px) {
+  .hero-section {
+    background: linear-gradient(135deg, var(--color-bg-gradient-start) 0%, var(--color-bg-gradient-end) 100%);
+  }
+
+  .hero-section__content {
+    padding: 40px 20px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    min-height: auto;
+    justify-content: flex-start;
+  }
+
+  /* Title - More compact on mobile */
+  .hero-section__title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    line-height: 1.2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  /* Subtitle - Better readability */
+  .hero-section__subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 28px;
+    line-height: 1.5;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  .hero-section__search {
+    margin-bottom: 20px;
+  }
+
+  /* Trust signals - Stack vertically or reduce */
+  .hero-section__trust-signals {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .trust-signal {
+    font-size: 12px;
+  }
+
+  .trust-signal__icon {
+    font-size: 13px;
+  }
+
+  .hero-section__categories {
+    padding-top: 16px;
+    padding-bottom: 32px;
+  }
+}
+
+/* Small mobile optimization */
+@media (max-width: 480px) {
+  .hero-section__content {
+    padding: 32px 16px;
+    padding-top: 50px;
+  }
+
+  .hero-section__title {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .hero-section__subtitle {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  /* Hide trust signals on very small screens */
+  .hero-section__trust-signals {
+    display: none;
+  }
+}
+
+/* ===================================
+   ACCESSIBILITY
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-section {
+    animation: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .hero-section__title {
+    color: var(--color-text-heading);
+  }
+
+  .hero-section__subtitle {
+    color: var(--color-text-primary);
+  }
+
+  .trust-signal {
+    color: var(--color-text-secondary);
+  }
+}

@@ -1,0 +1,49 @@
+/* ===================================
+   MOBILE THEME TOGGLE (Mobile Only)
+   Floating button in top-right corner
+   =================================== */
+
+.mobile-theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 997;
+  display: none; /* Hidden by default */
+}
+
+/* Show only on mobile */
+@media (max-width: 767px) {
+  .mobile-theme-toggle {
+    display: block;
+  }
+
+  .mobile-theme-toggle button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--color-bg-primary);
+    border: 2px solid var(--color-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-theme-toggle button:active {
+    transform: scale(0.95);
+  }
+
+  .mobile-theme-toggle button svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Hide on desktop */
+@media (min-width: 768px) {
+  .mobile-theme-toggle {
+    display: none !important;
+  }
+}

@@ -1,0 +1,233 @@
+/**
+ * PricingStep Component Styles
+ * Interactive pricing controls with animations
+ */
+
+.pricing-step {
+  width: 100%;
+}
+
+/* Price input */
+.pricing-group {
+  margin-bottom: 32px;
+}
+
+.price-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-gray-500);
+  pointer-events: none;
+}
+
+.price-input {
+  padding-left: 40px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-heading-alt);
+}
+
+/* Unit toggle */
+.unit-toggle {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.unit-button {
+  flex: 1;
+  min-width: 80px;
+  padding: 12px 20px;
+  background: var(--color-gray-100);
+  border: 2px solid var(--color-gray-200);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-gray-500);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+.unit-button:hover {
+  background: var(--color-gray-200);
+}
+
+.unit-button--active {
+  background: var(--color-blue-accent);
+  border-color: var(--color-blue-accent);
+  color: var(--color-text-white);
+}
+
+.unit-indicator {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-blue-accent);
+  border-radius: 3px 3px 0 0;
+}
+
+/* Earnings preview */
+.earnings-preview {
+  margin: 24px 0;
+}
+
+.earnings-card {
+  background: linear-gradient(135deg, var(--color-warning-amber) 0%, var(--color-warning-amber-light) 100%);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 12px var(--color-amber-shadow);
+}
+
+.earnings-icon {
+  font-size: 48px;
+}
+
+.earnings-content h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-warning-amber-text);
+  margin: 0 0 8px 0;
+}
+
+.earnings-amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-amber-text);
+  margin: 0 0 4px 0;
+}
+
+.earnings-note {
+  font-size: 12px;
+  color: var(--color-warning-amber-text);
+  margin: 0;
+}
+
+/* Toggle switch */
+.toggle-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: var(--color-gray-50);
+  border-radius: 12px;
+  border: 2px solid var(--color-gray-200);
+}
+
+.toggle-content {
+  flex: 1;
+}
+
+.toggle-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-heading-alt);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.toggle-description {
+  font-size: 14px;
+  color: var(--color-gray-500);
+  margin: 0;
+}
+
+.toggle-switch {
+  width: 56px;
+  height: 32px;
+  background: var(--color-gray-300);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease;
+  flex-shrink: 0;
+}
+
+.toggle-switch--on {
+  background: var(--color-blue-accent);
+}
+
+.toggle-handle {
+  width: 24px;
+  height: 24px;
+  background: var(--color-bg-primary);
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  box-shadow: 0 2px 4px var(--color-shadow);
+}
+
+.toggle-switch--on .toggle-handle {
+  left: 26px;
+}
+
+/* Availability note */
+.availability-note {
+  margin: 24px 0;
+}
+
+.note-card {
+  background: var(--color-blue-accent-bg-light);
+  border-left: 4px solid var(--color-blue-accent);
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  gap: 16px;
+  align-items: start;
+}
+
+.note-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.note-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-blue-accent-text);
+  margin: 0 0 8px 0;
+}
+
+.note-card p {
+  font-size: 14px;
+  color: var(--color-blue-accent-text-dark);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .unit-toggle {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .earnings-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .earnings-amount {
+    font-size: 28px;
+  }
+
+  .toggle-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

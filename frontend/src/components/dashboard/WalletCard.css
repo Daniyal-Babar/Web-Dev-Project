@@ -1,0 +1,177 @@
+/* Mobile-first: Base styles */
+.wallet-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.wallet-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.wallet-card__balance-section {
+  text-align: center;
+}
+
+.wallet-card__label {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.wallet-card__balance {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #10b981;
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.wallet-card__currency {
+  font-size: 1.25rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.wallet-card__helper {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.wallet-card__divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.wallet-card__easypaisa-section {
+  text-align: center;
+}
+
+.wallet-card__easypaisa-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.wallet-card__easypaisa-icon {
+  font-size: 1.5rem;
+}
+
+.wallet-card__easypaisa-label {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.wallet-card__easypaisa-number {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 0.75rem 0;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.1em;
+}
+
+.wallet-card__easypaisa-empty {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0;
+  font-style: italic;
+}
+
+.wallet-card__verification {
+  display: flex;
+  justify-content: center;
+}
+
+.wallet-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.wallet-card__badge--verified {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.wallet-card__badge--pending {
+  background: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .wallet-card {
+    padding: 2rem;
+  }
+
+  .wallet-card__balance {
+    font-size: 3rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .wallet-card__content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .wallet-card__balance-section {
+    text-align: left;
+    flex: 1;
+  }
+
+  .wallet-card__balance {
+    justify-content: flex-start;
+  }
+
+  .wallet-card__divider {
+    width: 1px;
+    height: 100px;
+    flex-shrink: 0;
+  }
+
+  .wallet-card__easypaisa-section {
+    text-align: left;
+    flex: 1;
+  }
+
+  .wallet-card__easypaisa-header {
+    justify-content: flex-start;
+  }
+
+  .wallet-card__verification {
+    justify-content: flex-start;
+  }
+
+  .wallet-card__balance {
+    font-size: 3.5rem;
+  }
+}
