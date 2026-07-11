@@ -7,8 +7,8 @@
 
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import CategoryDropdown from './CategoryDropdown';
-import ProfileMenu from './ProfileMenu';
+import CategoryDropdown from './CategoryDropdown.js';
+import ProfileMenu from './ProfileMenu.js';
 import Theme from '../theme/Theme.js';
 import Language from '../language/Language.js';
 
