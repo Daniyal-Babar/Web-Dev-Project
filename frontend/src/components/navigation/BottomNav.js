@@ -15,6 +15,7 @@ const BottomNav = () => {
 
   // Navigation items
   const navItems = [
+    { to: '/', icon: '🏠', label: 'Home' },
     { to: '/browse', icon: '🔍', label: 'Browse' },
     { to: '/create-listing', icon: '➕', label: 'Create' },
     { to: '/my-bookings', icon: '📋', label: 'Bookings' },

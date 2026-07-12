@@ -30,7 +30,7 @@ const HeroSection = ({
         {/* Trust Signals */}
         <div className="hero-section__trust-signals">
           <span className="trust-signal">
-            <span className="trust-signal__icon">✓</span>
+            <span className="trust-signal__icon">✅</span>
             Verified listings
           </span>
           <span className="trust-signal">
