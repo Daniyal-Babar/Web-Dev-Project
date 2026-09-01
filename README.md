@@ -1,23 +1,18 @@
-/**
- * README - My Rental Marketplace
- * 
- * A comprehensive MERN stack web application for renting various items
- * across 8 categories in Pakistan.
- */
-
 # My Rental Marketplace
 
 ## Overview
 
-A full-stack rental marketplace platform serving 8 main categories:
-- **Property**: Apartments, Houses, Commercial Spaces, Event Spaces, Farmhouses, Rooms
-- **Vehicles**: Cars, Motorcycles, Bicycles, Trucks, Heavy Machinery
-- **Clothes**: Wedding Wear, Designer Outfits, Seasonal Clothing, Accessories
-- **Equipment**: Farming, Electronics, Medical, Kitchen, Sports, Gaming
-- **Services**: Skilled Workers, Technical Staff, Event Staff, Drivers, Medical
-- **Animals**: Pets, Working Animals, Veterinary Services
-- **Boats**: Fishing, Passenger, Recreational, Cargo Vessels
-- **Air Transport**: Charter Planes, Helicopters, Air Ambulance, Cargo Aircraft
+My Rental Marketplace is a full-stack platform designed to connect people who want to rent or list items and services with people who need them. It supports multiple listing categories including property, vehicles, equipment, clothing, services, animals, boats, and air transport, giving users a single marketplace for short-term and long-term rentals.
+
+The platform enables users to:
+- Create and manage rental listings with category-specific details
+- Browse listings by category, city, date, price, and availability
+- Request or confirm bookings with built-in payment and messaging flows
+- Track earnings, wallet balances, and transaction history
+- Verify identity and profile trust signals before high-value transactions
+- Access an admin dashboard to manage users, listings, and platform activity
+
+This project combines a React frontend with an Express + MongoDB backend to deliver a complete rental marketplace experience for both owners and renters.
 
 ## Tech Stack
 
@@ -395,11 +390,3 @@ npm test           # Run tests
 - [ ] Insurance options for rentals
 - [ ] Buyer protection guarantee
 - [ ] Video chat support
-
-## License
-
-ISC
-
-## Contact
-
-For inquiries, contact: support@rentalmarketplace.pk
